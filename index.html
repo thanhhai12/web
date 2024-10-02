@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Simple CMS</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="nokotan.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="header-buttons">
+            <button class="btn" onclick="goToSettings()">Settings</button>
+            <button class="btn" onclick="goToSupport()">Support</button>
+            <span class="title">Home</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Home</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search content..." onkeyup="searchContent()">
+        
+        <!-- List of content -->
+        <div id="search-results">
+            <h2>Available Content</h2>
+            <div id="content-list"></div>
+        </div>
+
+        <!-- Button to go to CMS -->
+        <button id="add-btn" onclick="goToCMS()">Add New Content</button>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

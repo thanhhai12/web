@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CMS with Header</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="header-buttons">
+            <button class="btn" id="back-btn">Back to Home</button>
+            <button class="btn">Settings</button>
+            <button class="btn">Support</button>
+            <span class="title">CMS Title</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Website Content Management System</h1>
+        
+        <!-- Back to Homepage Button -->
+        <button id="back-btn-home" onclick="goToHome()">Back to Homepage</button>
+
+        <!-- Add Content -->
+        <div class="add-content">
+            <h2>Add New Content</h2>
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="content" placeholder="Enter content..." required></textarea>
+
+            <!-- File Uploads -->
+            <label for="image-upload">Upload Image (optional):</label>
+            <input type="file" id="image-upload" accept="image/*"><br>
+
+            <label for="doc-upload">Upload Document (DOCX) (optional):</label>
+            <input type="file" id="doc-upload" accept=".docx"><br>
+
+            <button id="add-btn">Add Content</button>
+        </div>
+
+        <!-- Display Content -->
+        <div id="content-area">
+            <h2>Website Content</h2>
+            <div id="content-list"></div>
+        </div>
+    </div>
+
+    <script src="add.js"></script>
+</body>
+</html>
