@@ -3,6 +3,11 @@ function goToCMS() {
     window.location.href = 'add.html'; // Navigate to Add Content page
 }
 
+function goToProfile() {
+    window.location.href = 'profile.html'; // Redirects to profile.html
+}
+
+
 // Function to navigate to Settings page
 function goToSettings() {
     alert('Settings page not implemented yet.');
@@ -10,7 +15,7 @@ function goToSettings() {
 
 // Function to navigate to Support page
 function goToSupport() {
-    alert('Support page not implemented yet.');
+    window.location.href = 'contact.html'; // Redirects to profile.html
 }
 
 // Function to display content from localStorage on Home page
@@ -104,3 +109,6 @@ function closeNav() {
 function goToSupport() {
     window.location.href = 'contact.html'; // Redirect to contact.html
 }
+
+
+

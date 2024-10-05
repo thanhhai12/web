@@ -110,6 +110,18 @@ h2 {
     cursor: pointer;
 }
 
+.pro-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
 .next-btn {
     background-color: #333;
     color: white;
@@ -204,3 +216,6 @@ button:hover {
 .side-nav.open {
     width: 250px;
 }
+
+
+
