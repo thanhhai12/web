@@ -85,3 +85,22 @@ function deleteContent(index) {
 
 // Load existing content on page load
 document.addEventListener('DOMContentLoaded', displayContent);
+
+
+function toggleNav() {
+    var nav = document.getElementById("side-nav");
+    if (nav.style.width === "250px") {
+        nav.style.width = "0";
+    } else {
+        nav.style.width = "250px";
+    }
+}
+
+function closeNav() {
+    document.getElementById("side-nav").style.width = "0";
+}
+
+
+function goToSupport() {
+    window.location.href = 'contact.html'; // Redirect to contact.html
+}

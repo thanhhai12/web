@@ -1,11 +1,54 @@
+document.getElementById('UpLoadImage').addEventListener('click', function() {
+    // Create an input element for file selection
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/png, image/jpeg'; // Accept only PNG and JPEG files
+
+    // When the user selects a file
+    input.addEventListener('change', function(event) {
+        const file = event.target.files[0]; // Get the selected file
+
+        if (file) {
+            const reader = new FileReader();
+
+            // When the file is read successfully
+            reader.onload = function(e) {
+                const imgElement = document.querySelector('.upload-preview-gif img'); // Select the image element
+                imgElement.src = e.target.result; // Set the image source to the uploaded file
+                imgElement.alt = file.name; // Optionally, set alt text to the file name
+            };
+
+            reader.readAsDataURL(file); // Read the file as a data URL
+        }
+    });
+
+    // Trigger the file selection dialog
+    input.click();
+});
+
+
+
+
+document.getElementById('uploadFilesBtn').addEventListener('click', function() {
+    // Trigger click event on the hidden file input element
+    document.getElementById('fileInput').click();
+});
+
+// Optional: Handle the file selection event
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        alert(`Selected file: ${file.name}`);
+        // You can add further code here to handle file upload
+    }
+});
+
+
+
 // Function to handle adding content
 document.getElementById('add-btn').addEventListener('click', function() {
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
-
-    // File uploads
-    const imageFile = document.getElementById('image-upload').files[0];
-    const docFile = document.getElementById('doc-upload').files[0];
 
     // Validate title and content
     if (!title || !content) {
@@ -83,3 +126,35 @@ function goToHome() {
 
 // Display existing content on page load
 document.addEventListener('DOMContentLoaded', displayAddedContent);
+
+
+function goToNextContainer() {
+    // Hide the first container
+    document.getElementById("title-container").style.display = "none";
+    document.getElementById("doc-container").style.display = "block";
+}
+
+
+// Function to go from container1 to container2
+function goToNextContainer() {
+    document.getElementById('title-container').style.display = 'none';
+    document.getElementById('doc-container').style.display = 'block';
+}
+
+// Function to go from container2 back to container1
+function goToPreviousContainer() {
+    document.getElementById('doc-container').style.display = 'none';
+    document.getElementById('title-container').style.display = 'block';
+}
+
+// Function to go from container2 to container3
+function goToNextContainer3() {
+    document.getElementById('doc-container').style.display = 'none';
+    document.getElementById('final-container').style.display = 'block';
+}
+
+// Function to go from container3 to container2
+function goToPreviousContainer2() {
+    document.getElementById('final-container').style.display = 'none';
+    document.getElementById('doc-container').style.display = 'block';
+}
