@@ -18,6 +18,14 @@ function goToSupport() {
     window.location.href = 'contact.html'; // Redirects to profile.html
 }
 
+function goToMedia() {
+    window.location.href = 'media.html';
+}
+
+
+function goToDocument() {
+    window.location.href = 'document.html';
+}
 // Function to display content from localStorage on Home page
 function displayContent() {
     const contentList = document.getElementById('content-list');
