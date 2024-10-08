@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="share_list.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -24,7 +25,7 @@
             <button class="sp-btn" onclick="goToSupport()"><img src="support.png"></button>
             <button class="pro-btn" onclick="goToProfile()"><img src="profile.png"></button>
         </div>
-    </header>
+    </header>  
 
     <!-- Left Side Navigation -->
     <div id="side-nav" class="side-nav">
@@ -68,10 +69,28 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="container-header">
-            <h1></h1>
+            <h1>Shared with me</h1>
+        </div>
+        <div class="file-shared-list-header">
+            <span>Name</span>
+            <span>Shared by</span>
+            <span>Share date</span>
+        </div>
+        <div class="file-shared-item">
+            <span class="file-shared-name">
+                <img src="folder.png" alt="file icon"> Mobile App
+            </span>
+            <span class="shared-by">trinhducanh</span>
+            <span class="share-date">Oct 1, 2024</span>
+        </div>
+        <div class="file-shared-item">
+            <span class="file-shared-name">
+                <img src="folder.png" alt="file icon"> Deep learning
+            </span>
+            <span class="shared-by">haise-dev</span>
+            <span class="share-date">Oct 1, 2024</span>
         </div>
         <button class="chatbot-btn" onclick="openChatbot()"><img src="ai.png"></button>
     </div>
