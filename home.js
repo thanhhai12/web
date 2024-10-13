@@ -26,6 +26,9 @@ function goToMedia() {
 function goToDocument() {
     window.location.href = 'document.html';
 }
+function goToShared() {
+    window.location.href = 'shared.html';
+}
 // Function to display content from localStorage on Home page
 function displayContent() {
     const contentList = document.getElementById('content-list');

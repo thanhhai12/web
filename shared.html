@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="add.css">
-    <link rel="stylesheet" href="document.css">
-    <link rel="stylesheet" href="hide-menu.css">
+    <link rel="stylesheet" href="share_list.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -26,7 +25,7 @@
             <button class="sp-btn" onclick="goToSupport()"><img src="support.png"></button>
             <button class="pro-btn" onclick="goToProfile()"><img src="profile.png"></button>
         </div>
-    </header>
+    </header>  
 
     <!-- Left Side Navigation -->
     <div id="side-nav" class="side-nav">
@@ -71,52 +70,32 @@
         </div>
     </div>
 
-
-    
     <div class="container">
         <div class="container-header">
-            <h1>List Document</h1>
-            <button class="upload-btn" onclick="triggerFileUpload()"><img src ="upload_icon.png"></button>
-            <button class = "trash-btn" id="go-to-trash" onclick="location.href='trash.html'"><img src = "trashbin.png"></button>
-            <input type="file" id="fileInput" accept=".txt,.xlsx" onchange="handleFileUpload()">
+            <h1>Shared with me</h1>
         </div>
-
-        <div class="file-container">
-            <table class="file-table" id="fileList">
-                <thead>
-                    <tr>
-                        <th>Upload Time</th>
-                        <th>File Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="fileList">
-                    <!-- Files will be injected here dynamically -->
-
-                   
-
-                    <div id="context-menu" class="context-menu">
-                        <ul>
-                            <li class="menu-option" data-action="view">View</li>
-                            <li class="menu-option" data-action="edit">Edit</li>
-                            <li class="menu-option" data-action="rename">Rename</li>
-                            <li class="menu-option" data-action="download">Download</li>
-                            <li class="menu-option" data-action="share">Share</li>
-                            <li class="menu-option" data-action="delete">Delete</li>
-                        </ul>
-                    </div>
-                </tbody>
-            </table>
-
-
-            
+        <div class="file-shared-list-header">
+            <span>Name</span>
+            <span>Shared by</span>
+            <span>Share date</span>
+        </div>
+        <div class="file-shared-item">
+            <span class="file-shared-name">
+                <img src="folder.png" alt="file icon"> Mobile App
+            </span>
+            <span class="shared-by">trinhducanh</span>
+            <span class="share-date">Oct 1, 2024</span>
+        </div>
+        <div class="file-shared-item">
+            <span class="file-shared-name">
+                <img src="folder.png" alt="file icon"> Deep learning
+            </span>
+            <span class="shared-by">haise-dev</span>
+            <span class="share-date">Oct 1, 2024</span>
         </div>
         <button class="chatbot-btn" onclick="openChatbot()"><img src="ai.png"></button>
     </div>
 
-
-
-   
     <footer class="footer-nav">
         <div class="footer-buttons">
             <button class="prev-btn" onclick="goToPreviousContainer()" style="display: none;">Previous</button>
@@ -128,22 +107,5 @@
     <script src="home.js"></script>
     <script src="chatbot.js"></script>
     <script src="add.js"></script>
-    <script src="document.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
